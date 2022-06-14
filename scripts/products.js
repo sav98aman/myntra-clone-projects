@@ -113,11 +113,9 @@ document.getElementById("wishlist").addEventListener("click",function(){
 document.getElementById('pincode-submit').addEventListener('click',function(){
     pincodecheck()
 })
-
 });
 }
 display_products(data)
-
 let cart =JSON.parse(localStorage.getItem('cart')) ||[]
 function addtocartfun(element){
     // console.log(element)
