@@ -1,1 +1,24 @@
-*{border: 2px solid red;}
+/* *{border: 2px solid red;} */
+#products-data{
+    border: 1px solid red;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    padding: 10px;
+}
+#imgae-products{
+    border: 1px solid red;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    padding: 10px;
+}
+#products-data-info{
+    border: 2px solid red;
+    padding: 10px;
+
+}
+#productsinfo{
+    border: 1px solid red;
+    
+}
