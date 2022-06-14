@@ -31,3 +31,29 @@
     width: 200px;
     height: 250px;
 }
+#button{
+    text-align: center;
+    border:2px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+#addtocart{
+    background-color: #ff527b;
+    padding: 10px;
+    width: 100px;
+}
+#wishlist{
+    border: 1px solid;
+    padding: 10px;
+    width: 100px;
+}
+#addtocart:hover{
+    background-color: #ff527b;
+    padding: 10px;
+    width: 100px;
+}
+#wishlist:hover{
+    background-color: #ff527b;
+    padding: 10px;
+    width: 100px;
+}

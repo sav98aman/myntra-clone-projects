@@ -5,64 +5,141 @@ data=[{"name": "DKNY Unisex Black & Grey Printed Medium Trolley Bag", "sku": "10
 let products_data=JSON.parse(localStorage.getItem('products_data'))
 
 let display_products=(data)=>{
+    
     data.forEach(element => {
         console.log(element)
         let img_array=data[0].images.split("~")
-
         let img_box=document.getElementById("image")
         for(let i=0;i<img_array.length-1;i++){
             let div=document.createElement("div")
-
             let img=document.createElement("img")
             img.setAttribute("class",'products_img')
             img.src=img_array[i]
             div.append(img)
             img_box.append(div)
         }
-
-        // title;
         let div=document.createElement('div')
         let h4_brand=document.createElement("h4")
         h4_brand.innerText=element.brand;
-        console.log(h4_brand)
 
         let p_name=document.createElement("p")
         p_name.innerText=element.name;
-        console.log(p_name)
-        let p_description=document.createElement("p")
-        p_description.innerText=element.description;
-        // console.log(p_description)
 
-        //price 
+        div.append(h4_brand,p_name)
+        document.getElementById('productsinfo').append(div)
+
         let div_price=document.createElement('div')
         let price=document.createElement('h3')
-        price.innerText="Rs. "+element.price+element.currency+" 40%-OFF"+" "+element.price*1.4;
-        console.log(price)
+        price.innerText="Rs."+element.price+element.currency+" 40%-OFF"+" "+element.price*1.4;
+        div_price.append(price)
+        document.getElementById("price_data").append(div_price)
 
-        // innclusive tax 
-        let tax=`<div><i><p>Inclusive of all taxes</p></i></div>`
-
-        ///siza
-        let siza=` <div>
-            <div style="display: flex; justify-content: space-around; border: 1px solid ;">
-                <div><p>S</p></div>
-                <div><p>M</p></div>
-                <div><p>L</p></div>
-                <div><p>XL</p></div>
-            </div>
+        document.getElementById("siza_chart").innerHTML=`<div><h4><span>Siza chart</span><span>--------</span><span>siza chart ></span></h4></div><div style="display: flex; justify-content: space-around; border: 1px solid ;">
+            <div><p>S</p></div>
+            <div><p>M</p></div>
+            <div><p>L</p></div>
+            <div><p>XL</p></div>
         </div>`
-        console.log(siza)
-        
 
-    });
+        document.getElementById("button").innerHTML=`<div id="addtocart"><span><img src="" alt=""></span>Add to cart</div>
+        <div id="wishlist"><span><img src="" alt="">wishlist</span></div>`
+
+        document.getElementById("delivery-option").innerHTML=`<div><h4>DELIVERY OPTIONS </h4><span></span></div>
+        <div>
+            <form>
+                <input type="text" placeholder="Enter pincode" id="pincode">
+                <input type="submit"id="pincode-submit" value="check">
+            </form>
+        </div>
+        <div><p>Please enter PIN code to check delivery time & Pay on Delivery Availability</p></div>`;
+
+        document.getElementById("extra_info").innerHTML=`<div>
+        <div>100% Original Products</div>
+        <div>Pay delivery might be available</div>
+        <div>Easy 30 days returns and exchanges</div>
+        <div>Try & Buy might be available</div>
+    </div>`;
+
+    document.getElementById("best-offers").innerHTML=`<div>BEST OFFERS <span></span></div>
+    <div>
+        <div><h4>Best price: </h4></div>
+        <div id="coupon-discounts">
+            <ul>
+                <li>Coupon Discount: Rs. 50 off (check cart for final savings)</li>
+                <li>Applicable on: Orders above Rs. 100 (only on first purchase)</li>
+                <li>Coupon code: MYNTRA50</li>
+            </ul>
+        </div>
+        <div id="banks-offers">
+            <div id="icice-bank">
+                <h4>10% Instant Discount on ICICI Bank Credit and Debit Cards</h4>
+                <ul><li>Min spend Rs 3,500. TCA</li></ul>
+            </div>
+            <div id="icice-bank">
+                <h4>0% Instant Discount on Axis Bank Credit Cards</h4>
+                <ul><li>Min spend Rs 3,000. TCA</li></ul>
+            </div>
+            <div id="icice-bank">
+                <h4>Flat Rs 150 Cashback on Paytm Wallet and Postpaid</h4>
+                <ul><li>Min spend Rs 1,500. TCA</li></ul>
+            </div>
+            <div id="icice-bank">
+                <h4>15% Cashback upto Rs 750 on ZestMoney.</h4>
+                <ul><li>Shop with 0% Interest* EMIs. TCA</li></ul>
+            </div>
+
+            <div id="icice-bank">
+                <h4>10% Instant Discount + 5% Unlimited Cashback</h4>
+                <ul><li>Shop with Flipkart Axis Bank Credit Card; Min Spend Rs 3000</li></ul>
+            </div>
+            <div id="icice-bank">
+                <h4>EMI option available</h4>
+                <ul><li>EMI starting from Rs.15/month</li></ul>
+            </div>
+
+        </div>
+    </div>`
+
+    document.getElementById("proucts-details").innerHTML=`<div><h4>PRODUCT DETAILS </h4><span></span></div><div><P>${element.description}</P></div>`
+
+// add to cart part
+document.getElementById("addtocart").addEventListener("click",function(){
+    addtocartfun(element)
+})
+//wish-list
+document.getElementById("wishlist").addEventListener("click",function(){
+    wishlistfunc(element)
+})
+document.getElementById('pincode-submit').addEventListener('click',function(){
+    pincodecheck()
+})
+
+});
 }
 display_products(data)
 
-// for image spliting the in array fromated
+let cart =JSON.parse(localStorage.getItem('cart')) ||[]
+function addtocartfun(element){
+    // console.log(element)
+    cart.push(element)
+    let cart=localStorage.setItem("cart",JSON.stringify(cart))
+    
+}
+let wishlist=JSON.parse(localStorage.getItem('wishlist'))||[]
+function wishlistfunc(element){
+    wishlist.push(element);
 
-// console.log(data)
-// let img=data[0].images.split("~")
-// console.log(img[0])
-// let i=document.createElement("img")
-// i.src=img[0]
-// document.getElementById('image-products').append(i)
+    localStorage.setItem('wishlist',JSON.stringify(wishlist))
+}
+//pincode check
+function pincodecheck(){
+    event.preventDefault()
+    let pin=document.getElementById("pincode").value;
+    if(pin.length==6){
+        alert("pin is valid")
+    }
+    else{
+        alert("pin not valid")
+    }
+}
+
