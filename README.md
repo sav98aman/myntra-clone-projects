@@ -1,3 +1,3 @@
 # mytra-clone-projects
-Masai unit 3 constructs weak projects
-link link:: https://myntracp.netlify.app
+# Masai unit 3 constructs weak projects
+# link:: https://myntracp.netlify.app
