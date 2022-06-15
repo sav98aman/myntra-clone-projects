@@ -1,0 +1,90 @@
+#sub-nav{
+    border: 1px solid black;
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+#filter-head{
+    width: 16%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filter-head > h4{
+    margin-left: 30px;
+    
+}
+
+#cat-sort{
+    width: 84%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.min-fil{
+    height: 27px;
+    width: auto;
+    border-radius: 10px;
+    background-color: white;
+    border: 0px;
+
+}
+
+.min-fil:hover{
+    background-color: rgb(211, 221, 221);
+}
+
+#sort{
+    width: 200px;
+    height: 25px;
+    margin-right: 25px;
+}
+
+#filters-products{
+    width: 100%;
+    height: auto ;
+    border: 1px solid black;
+    margin-top: 5px;
+    display: flex;
+    
+}
+
+#filters{
+    width: 16%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#products{
+    width: 84%;
+    height: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+     
+}
+
+.card{
+    height: 350px;
+    width: 230px;
+    border: 1px solid black;
+}
+
+.pro-img{
+    height: 70%;
+    width: 100%;
+}
