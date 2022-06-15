@@ -12,7 +12,6 @@ div2.innerHTML = footer();
 fetch("./json/home.json")
     .then(response => response.json())
     .then(data => {
-        console.log(data.musthaveinyourwardrobe);
         musthaveinyourwardrobe(data.musthaveinyourwardrobe);
         budgetbuysappend(data.budgetbuys);
         bestofclothingappend(data.bestofclothing);
