@@ -3,6 +3,7 @@
     height: 100px;
     width: 100%;
     display: flex;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #filter-head{
@@ -10,12 +11,16 @@
     height: 100%;
     border: 1px solid black;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    gap: 0px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #filter-head > h4{
-    margin-left: 30px;
+    margin-left: 15px;
+    font-family: 'Titillium Web', sans-serif;
     
 }
 
@@ -26,6 +31,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .min-fil{
@@ -34,6 +40,7 @@
     border-radius: 10px;
     background-color: white;
     border: 0px;
+    font-family: 'Titillium Web', sans-serif;
 
 }
 
@@ -45,6 +52,7 @@
     width: 200px;
     height: 25px;
     margin-right: 25px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #filters-products{
@@ -53,6 +61,7 @@
     border: 1px solid black;
     margin-top: 5px;
     display: flex;
+    font-family: 'Titillium Web', sans-serif;
     
 }
 
@@ -63,6 +72,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #products{
@@ -71,20 +82,82 @@
     border: 1px solid black;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 15px;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Titillium Web', sans-serif;
      
 }
 
 .card{
-    height: 350px;
-    width: 230px;
+    height: 400px;
+    width: 290px;
     border: 1px solid black;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .pro-img{
-    height: 70%;
+    height: 80%;
     width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.rating{
+    height: 20px;
+    width: 45px;
+    background-color: rgb(255, 255, 255);
+    margin-top: -32px;
+    opacity: 95%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.desc{
+    margin-top: -25px;
+    margin-left: 10px;
+}
+
+.name{
+    margin-left: 10px;
+}
+
+.price{
+    margin-left: 10px;
+    margin-top: -20px;
+}
+
+#categ{
+    /* border: 0.5px solid ; */
+    height: 150px;
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#categ > input{
+    margin-left: 15px;
+}
+
+#brand{
+    height: 260px;
+    width: 100%;
+    border: 1px solid pink;
+}
+
+#brand > input{
+    margin-left: 15px;
+}
+
+#price4{
+    height: 270px;
+    width: 100%;
+    border: 1px solid red;
+}
+
+#price4 > input{
+    margin-left: 15px;
 }

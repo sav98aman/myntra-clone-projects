@@ -28,7 +28,7 @@ async function addData(){
     }
     console.log(data)
    
-    let res = await fetch(`http://localhost:3000/api/products`,{
+    let res = await fetch(`./db.json`,{
         method: 'POST',
 
         body: JSON.stringify(data),
