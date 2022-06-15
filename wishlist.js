@@ -68,6 +68,8 @@
 
     else { wish_append() }
     function wish_append() {
+        let length=document.createElement("h3")
+        length.innerText=`MY Wishlist ${wishlist.length} Items`
 
         wishlist.forEach((ele, index) => {
             let div = document.createElement("div")
@@ -113,7 +115,7 @@
 
             div.append(image, title, price, pricecut, off, move, delet)
             main.append(div)
-            box.append(main)
+            box.append(length,gtimain)
         })
 
 
