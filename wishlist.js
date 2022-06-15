@@ -115,7 +115,7 @@
 
             div.append(image, title, price, pricecut, off, move, delet)
             main.append(div)
-            box.append(length,gtimain)
+            box.append(length,main)
         })
 
 
