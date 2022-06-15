@@ -1,0 +1,16 @@
+[33mcommit f26835b3ad320ea0d1f534aba0bf8cfa05d3c6e5[m[33m ([m[1;36mHEAD -> [m[1;32mproduct-details[m[33m, [m[1;31morigin/product-details[m[33m)[m
+Author: sav98aman <savverma98@gmail.com>
+Date:   Tue Jun 14 16:40:44 2022 +0530
+
+    correct syntext error
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 7afc9f0..20ab6a9 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-# mytra-clone-projects[m
+[32m+[m[32m# myntra-clone-projects[m
+ # Masai unit 3 constructs weak projects[m
+ # link:: https://myntracp.netlify.app[m
+ [m
