@@ -2,8 +2,8 @@
 
 
 // import swal from 'sweetalert';
-    let wishlist = [2]
-    let login = true
+    let wishlist = []
+    let login = true;
     let box = document.querySelector("#box")
     let main = document.querySelector("#main")
 
@@ -37,7 +37,7 @@
         box.append(div)
     }
     /*if user loged in but not add any item*/
-    else if (wishlist.length == 0) {
+    else if (login==true&&wishlist.length == 0) {
 
 
         let div = document.createElement("div")
@@ -66,7 +66,7 @@
 
 
 
-    else { wish_append() }
+    else {wish_append() }
     function wish_append() {
         let length=document.createElement("h3")
         length.innerText=`MY Wishlist ${wishlist.length} Items`
@@ -89,12 +89,16 @@
             let price = document.createElement("p")
             price.innerText = `Rs.${ele.price}`
             price.style.fontWeight = "bold"
+
+            let movdiv=document.createElement("div")
+            movdiv.setAttribute("id","movediv")
             let move = document.createElement("button")
             move.innerText = "MOVE TO BAG"
             move.setAttribute("id", "move")
                 let myarr=JSON.parse(localStorage.getItem("bag"))||[]
             move.addEventListener("click",()=>{
 
+                alert("Item succesfully added to Bag")
                myarr.push(ele)
                localStorage.setItem("bag",JSON.stringify(myarr))
             //    swal("Here's a message!", "It's pretty, isn't it?");
@@ -104,7 +108,7 @@
             delet.innerText = "X"
             delet.setAttribute("id", "delet")
             delet.addEventListener("click",()=>{
-
+                alert("Item Succesfully Removed from Wishlist")
              let new_wish= wishlist.filter((elem,inde)=>{
                 return inde!=index
               })
@@ -112,8 +116,8 @@
               window.location.reload()
 
             })
-
-            div.append(image, title, price, pricecut, off, move, delet)
+                    movdiv.append(move)
+            div.append(image, title, price, pricecut, off, movdiv, delet)
             main.append(div)
             box.append(length,main)
         })
@@ -122,4 +126,5 @@
 
 
     }
+    console.log(wishlist.length)
 
