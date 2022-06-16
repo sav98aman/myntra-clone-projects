@@ -7,7 +7,8 @@
         "Price": "314",
         "Discripation": " HRX Men's Athleisure T-shirt.",
         "rating": "4",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"small"
       },
       {
         "id": "2",
@@ -16,7 +17,8 @@
         "Price": "3999",
         "Discripation": "White Tshirt for men Solid",
         "rating": "4.5",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"medium"
       },
       {
         "id": "3",
@@ -25,7 +27,8 @@
         "Price": "405",
         "Discripation": "Black solid T-shirt",
         "rating": "4.1",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"large"
       },
       {
         "id": "4",
@@ -34,7 +37,8 @@
         "Price": "700",
         "Discripation": "T-shirt in soft cotton jersey ",
         "rating": "4.1",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"medium"
       },
       {
         "id": "5",
@@ -43,7 +47,8 @@
         "Price": "461",
         "Discripation": "Teal green Tropical printed ",
         "rating": "4.4",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"large"
       },
       {
         "id": "6",
@@ -52,7 +57,8 @@
         "Price": "951",
         "Discripation": "Product design detail; Purple ",
         "rating": "4.5",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"xl"
       },
       {
         "id": "7",
@@ -61,7 +67,8 @@
         "Price": "799",
         "Discripation": "Relaxed-fit T-shirt in soft ",
         "rating": "3.5",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"small"
       },
       {
         "id": "8",
@@ -70,7 +77,8 @@
         "Price": "501",
         "Discripation": "Mint green tshirt for men ",
         "rating": "4.6",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"medium"
       },
       {
         "id": "9",
@@ -79,7 +87,8 @@
         "Price": "1365",
         "Discripation": "White solid T-shirt",
         "rating": "3.5",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"large"
       },
       {
         "id": "10",
@@ -88,7 +97,8 @@
         "Price": "749",
         "Discripation": "Slim-fit polo shirt in soft",
         "rating": "4",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"xl"
       },
       {
         "id": "11",
@@ -97,7 +107,8 @@
         "Price": "699",
         "Discripation": "Black and white Tshirt for men",
         "rating": "3.5",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"xxl"
       },
       {
         "id": "12",
@@ -106,7 +117,88 @@
         "Price": "399",
         "Discripation": " HRX Men's Running T-shirt.",
         "rating": "3.5",
-        "category": "t-sirts"
+        "category": "t-sirts",
+        "size":"small"
+      },
+      {
+        "id": "13",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12337932/2020/11/9/12e2aab9-b59e-4118-b439-8377ba2c2a3f1604920574966-HERENOW-Men-Tshirts-5831604920571992-1.jpg",
+        "Name": "HERE & NOW ",
+        "Price": "1099",
+        "Discripation": "Stripped Round Neck Tshirt ",
+        "rating": "4.3",
+        "category": "t-sirts",
+        "size":"medium"
+      },
+      {
+        "id": "14",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11468720/2022/4/7/b6323899-a9a4-4356-ac4e-4aaf3a648dba1649328775264HMMenWhiteSolidV-NeckT-shirtRegularFit1.jpg",
+        "Name": "H&M ",
+        "Price": "399",
+        "Discripation": "V-Neck Tshirt Regular fit ",
+        "rating": "3.9",
+        "category": "t-sirts",
+        "size":"xxl"
+      },
+      {
+        "id": "15",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/9/28/6fed9be0-6cdf-43fa-875d-17443645232c1569660347277-1.jpg",
+        "Name": "Allen Solly ",
+        "Price": "576",
+        "Discripation": "Colourblocked Polo Collor ",
+        "rating": "3.9  ",
+        "category": "t-shirt",
+        "size":"xl"
+      },
+      {
+        "id": "16",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11487316/2020/6/17/7747f19e-1995-4c19-bd44-34b84d03defe1592395213591-Nautica-Men-Tshirts-1431592395211486-1.jpg",
+        "Name": "Nautica ",
+        "Price": "2599",
+        "Discripation": "Men Solid Pure Cotton ",
+        "rating": "4.6",
+        "category": "t-sirts",
+        "size":"large"
+      },
+      {
+        "id": "17",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12118618/2020/10/15/b6badecf-6cce-42b4-8d14-992e9487af891602763479310-Roadster-Men-Tshirts-1441602763477799-1.jpg",
+        "Name": " Roadster",
+        "Price": "399",
+        "Discripation": " Pure Cotton Tshirt",
+        "rating": "4.2",
+        "category": "t-sirts",
+        "size":"medium"
+      },
+      {
+        "id": "18",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10565550/2020/2/4/f70804e6-57e7-4ca6-b1c2-05b3bfc6b56e1580809654093-HRX-by-Hrithik-Roshan-Men-Blue--Charcoal-Grey-Colourblocked--1.jpg",
+        "Name": "HRX by Hritik Roshan ",
+        "Price": "899",
+        "Discripation": " ",
+        "rating": "4.3",
+        "category": "t-sirts",
+        "size":"small"
+      },
+      {
+        "id": "19",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17890870/2022/4/29/709504b8-164f-46b7-95fd-cb0251f1bab01651224478359-Peter-England-Men-White-Solid-Polo-Collar-T-shirt-3261651224-1.jpg",
+        "Name": "Peter England ",
+        "Price": "899",
+        "Discripation": "Mens Solid Polo Collor ",
+        "rating": "4.5",
+        "category": "t-sirts",
+        "size":"xxl"
+      },
+      {
+        "id": "20",
+        "Image": "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1301358/2016/11/21/11479716524889-Roadster-Charcoal-Grey-Flock-Print-Sweatshirt-1311479716524565-1.jpg",
+        "Name": "Roadster ",
+        "Price": "599",
+        "Discripation": "Tshirt with Shoulder  ",
+        "rating": "4.2",
+        "category": "t-sirts",
+        "size":"small"
       }
     ]
   }
