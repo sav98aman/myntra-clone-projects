@@ -1,16 +1,25 @@
 
 
-data=[{"name": "DKNY Unisex Black & Grey Printed Medium Trolley Bag", "sku": "10017413", "mpn": "10017413", "price": "11745", "in_stock": true, "currency": "INR", "brand": "DKNY", "description": "Black and grey printed medium trolley bag, secured with a TSA lockOne handle on the top and one on the side, has a trolley with a retractable handle on the top and four corner mounted inline skate wheelsOne main zip compartment, zip lining, two compression straps with click clasps, one zip compartment on the flap with three zip pocketsWarranty: 5 yearsWarranty provided by Brand Owner / Manufacturer", "images": "http://assets.myntassets.com/assets/images/10017413/2020/3/6/0896e133-7c7c-4bca-a6a9-e58de74515211583495685498DKNYUnisexBlackGreyPrintedMediumTrolleyBag1.jpg ~ http://assets.myntassets.com/assets/images/10017413/2020/3/6/7cfd6b92-5b81-4ea1-940f-9f881f830f261583495685583DKNYUnisexBlackGreyPrintedMediumTrolleyBag2.jpg ~ http://assets.myntassets.com/assets/images/10017413/2020/3/6/40f5febb-c807-49d4-9e98-55b6ec43fdd81583495685652DKNYUnisexBlackGreyPrintedMediumTrolleyBag3.jpg ~ http://assets.myntassets.com/assets/images/10017413/2020/3/6/3398a3d6-f65d-4df6-b203-1f5a899e63791583495685728DKNYUnisexBlackGreyPrintedMediumTrolleyBag4.jpg ~ http://assets.myntassets.com/assets/images/10017413/2020/3/6/cd6df4c9-7aca-4210-a3d7-3d5df0c2aca31583495685808DKNYUnisexBlackGreyPrintedMediumTrolleyBag5.jpg ~ http://assets.myntassets.com/assets/images/10017413/2020/3/6/a4a97e77-f868-4014-8c59-2ef31fba72251583495685869DKNYUnisexBlackGreyPrintedMediumTrolleyBag6.jpg ~ http://assets.myntassets.com/assets/images/10017413/2020/3/6/e1a8792f-01a0-414d-9deb-4ba1688322b91583495685931DKNYUnisexBlackGreyPrintedMediumTrolleyBag7.jpg", "gender": "Unisex"}
+data=[ {
+    "id": "6",
+    "Image": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/8759f49a-ac2c-48ed-a15f-989d87a267bd1649918786474-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-5.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/bb7af3cf-403f-475d-967e-f1edb5719ead1649918786485-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-4.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/22f56f9e-72f0-408f-8de1-668923e4b8421649918786494-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-3.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/5e293ca3-1413-4fb4-a0fd-ffcab037a7511649918786503-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-2.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/63c5d816-55b5-4397-b9ba-f64b3e569acf1649918786512-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-1.jpg",
+    "Name": "Nike ~ Men Purple & Pink Brand Logo Printed ASM NSW Pure Cotton Sports T-shirt",
+    "Price": "951",
+    "Discripation": "Product design detail; Purple and pink Tshirt for men Brand logo printed Regular length Round neck Short, regular sleeves Knitted cotton fabric",
+    "rating": "4.5",
+    "category": "t-sirts"
+  },
 ]
 let products_data=JSON.parse(localStorage.getItem('products_data'))
 
 let display_products=(data)=>{
-    
+    console.log(data)
     data.forEach(element => {
-        console.log(element)
-        let img_array=data[0].images.split("~")
+        // console.log(element.Image.trim(" ").split("~"))
+
+        let img_array=element.Image.trim(" ").split("~")
         let img_box=document.getElementById("image")
-        for(let i=0;i<img_array.length-1;i++){
+        for(let i=0;i<img_array.length;i++){
             let div=document.createElement("div")
             let img=document.createElement("img")
             img.setAttribute("class",'products_img')
@@ -18,39 +27,51 @@ let display_products=(data)=>{
             div.append(img)
             img_box.append(div)
         }
+        let brand_data=element.Name;
+        let name_arr=brand_data.trim(" ").split("~")
+        
         let div=document.createElement('div')
-        let h4_brand=document.createElement("h4")
-        h4_brand.innerText=element.brand;
+        let h4_brand=document.createElement("h1")
+        h4_brand.innerText=name_arr[0];
 
         let p_name=document.createElement("p")
-        p_name.innerText=element.name;
+        p_name.innerText=name_arr[1];
+        let r_div=document.createElement("div")
+        let rating=document.createElement("h4")
+        rating.innerHTML=`${element.rating}<span class="fa fa-star checked"></span>  ${element.rating*10}k   <span id="ratings">Ratings</span>`
+        r_div.append(rating)
+        r_div.setAttribute("id",'ratingbox')
 
-        div.append(h4_brand,p_name)
+
+        div.append(h4_brand,p_name,r_div)
         document.getElementById('productsinfo').append(div)
 
         let div_price=document.createElement('div')
         let price=document.createElement('h3')
-        price.innerText="Rs."+element.price+element.currency+" 40%-OFF"+" "+element.price*1.4;
+        let discounts=Math.floor(Math.random()* 40) + 10;
+        let price_max=Math.floor(element.Price*(100+discounts)/100)
+        console.log(price_max)
+        price.innerHTML=`<span>Rs.</span>${element.Price} <span id="max_price">Rs.${price_max}</span> <span id="discounts">(${discounts}%-Off)</span>`
+
         div_price.append(price)
         document.getElementById("price_data").append(div_price)
 
-        document.getElementById("siza_chart").innerHTML=`<div><h4><span>Siza chart</span><span>--------</span><span>siza chart ></span></h4></div><div style="display: flex; justify-content: space-around; border: 1px solid ;">
-            <div><p>S</p></div>
-            <div><p>M</p></div>
-            <div><p>L</p></div>
-            <div><p>XL</p></div>
+        document.getElementById("siza_chart").innerHTML=`<div ><h4 id="siza_chartdis"><span>SELECT SIZE</span><span></span></span><span id="siza_charts">siza chart ></span></h4></div><div id='select-siza'>
+            <div id="S" class="siza"><p>S</p></div>
+            <div id="M"class="siza"><p>M</p></div>
+            <div id="L" class="siza"><p>L</p></div>
+            <div id="XL" class="siza"><p>XL</p></div>
         </div>`
 
-        document.getElementById("button").innerHTML=`<div id="addtocart"><span><img src="" alt=""></span>Add to cart</div>
-        <div id="wishlist"><span><img src="" alt="">wishlist</span></div>`
+        document.getElementById("button").innerHTML=`<div id="addtocart"><span id="bag"><span><img id="img_id" src="../img/iconly-essential-icons.png" alt=""></span><span>Add to cart</span></span></div>
+        <div id="wishlist"><span id="bag"><span><img id="img_id" src="../img/whislist (3).png" alt=""></span><span>wishlist</span></span></div>`
 
-        document.getElementById("delivery-option").innerHTML=`<div><h4>DELIVERY OPTIONS </h4><span></span></div>
-        <div>
+        document.getElementById("delivery-option").innerHTML=`<div id="delid"><sapn><h4>DELIVERY OPTIONS</h4></sapn><span ><img id="img_id" src="../img/delivery (1).png" alt=""></span></div>
             <form>
                 <input type="text" placeholder="Enter pincode" id="pincode">
                 <input type="submit"id="pincode-submit" value="check">
+                <div id="valid"></div>
             </form>
-        </div>
         <div><p>Please enter PIN code to check delivery time & Pay on Delivery Availability</p></div>`;
 
         document.getElementById("extra_info").innerHTML=`<div>
@@ -62,45 +83,52 @@ let display_products=(data)=>{
 
     document.getElementById("best-offers").innerHTML=`<div>BEST OFFERS <span></span></div>
     <div>
-        <div><h4>Best price: </h4></div>
+        <div id="delid"><span><h2>Best price: </h2></span><span><img id="img_id" src="../img/tag.png" alt=""></span></div>
         <div id="coupon-discounts">
             <ul>
                 <li>Coupon Discount: Rs. 50 off (check cart for final savings)</li>
                 <li>Applicable on: Orders above Rs. 100 (only on first purchase)</li>
                 <li>Coupon code: MYNTRA50</li>
             </ul>
+            <div id="off"><p class="offers_e">View Eligible Products</p></div>
         </div>
         <div id="banks-offers">
             <div id="icice-bank">
                 <h4>10% Instant Discount on ICICI Bank Credit and Debit Cards</h4>
                 <ul><li>Min spend Rs 3,500. TCA</li></ul>
+                <p class="offers_e">View Eligible Products</p>
             </div>
             <div id="icice-bank">
                 <h4>0% Instant Discount on Axis Bank Credit Cards</h4>
                 <ul><li>Min spend Rs 3,000. TCA</li></ul>
+                <p class="offers_e">View Eligible Products</p>
             </div>
             <div id="icice-bank">
                 <h4>Flat Rs 150 Cashback on Paytm Wallet and Postpaid</h4>
                 <ul><li>Min spend Rs 1,500. TCA</li></ul>
+                <p class="offers_e">View Eligible Products</p>
             </div>
             <div id="icice-bank">
                 <h4>15% Cashback upto Rs 750 on ZestMoney.</h4>
                 <ul><li>Shop with 0% Interest* EMIs. TCA</li></ul>
+                <p class="offers_e">View Eligible Products</p>
             </div>
 
             <div id="icice-bank">
                 <h4>10% Instant Discount + 5% Unlimited Cashback</h4>
                 <ul><li>Shop with Flipkart Axis Bank Credit Card; Min Spend Rs 3000</li></ul>
+                <p class="offers_e">View Eligible Products</p>
             </div>
             <div id="icice-bank">
                 <h4>EMI option available</h4>
                 <ul><li>EMI starting from Rs.15/month</li></ul>
+                <p class="offers_e">View Eligible Products</p>
             </div>
 
         </div>
     </div>`
 
-    document.getElementById("proucts-details").innerHTML=`<div><h4>PRODUCT DETAILS </h4><span></span></div><div><P>${element.description}</P></div>`
+    document.getElementById("proucts-details").innerHTML=`<div><h4>PRODUCT DETAILS </h4><span></span></div><div><P>${element.Discripation}</P></div>`
 
 // add to cart part
 document.getElementById("addtocart").addEventListener("click",function(){
@@ -115,14 +143,28 @@ document.getElementById('pincode-submit').addEventListener('click',function(){
 })
 });
 }
+// *******************************
 display_products(data)
+
+//add to cart function 
 let cart =JSON.parse(localStorage.getItem('cart')) ||[]
 function addtocartfun(element){
-    // console.log(element)
-    cart.push(element)
-    let cart=localStorage.setItem("cart",JSON.stringify(cart))
-    
+    let ID=element.id;
+    let count=0;
+    cart.forEach(function(ele){
+        if(ele.id==ID){
+            count++;
+        }
+    })
+    if(cart.length==count){
+        alert("iteam already present in cart")
+    }else{
+        cart.push(element)
+    }
 }
+
+
+//whishlist
 let wishlist=JSON.parse(localStorage.getItem('wishlist'))||[]
 function wishlistfunc(element){
     wishlist.push(element);
@@ -134,10 +176,32 @@ function pincodecheck(){
     event.preventDefault()
     let pin=document.getElementById("pincode").value;
     if(pin.length==6){
-        alert("pin is valid")
+        // alert("pin is valid")
+        document.getElementById("valid").innerHTML=null
+        document.getElementById("valid").innerHTML=`<h4 class="check_pin">pin-code valid</h4>`
     }
     else{
-        alert("pin not valid")
+        // alert("pin not valid")
+        document.getElementById("valid").innerHTML=null
+        document.getElementById("valid").innerHTML=`<h4 class="check_pin">Invalid pin-code</h4>`
     }
 }
 
+//bank_offers
+document.getElementById("off").addEventListener("click",function(){
+    window.location.href="banksoffers.html"
+})
+//siza selection 
+let siza=document.getElementById("select-siza").children;
+let order=JSON.parse(localStorage.getItem('order-siza'))||[]
+function chose_siza(){
+    order=JSON.parse(localStorage.getItem('order'))||[]
+    const siza={
+        Siza:this.id
+    }
+    order.push(siza)
+    console.log(order)
+}
+for (let ele of siza) {
+    ele.addEventListener("click",chose_siza)
+}
