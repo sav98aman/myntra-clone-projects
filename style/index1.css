@@ -32,7 +32,7 @@
 	float:left;
 	padding:0px;
 	width:800px;
-	height:40px;
+	height:400px;
 	line-height:50px;
 	border-radius:5px;
     margin-top: 1px;
@@ -42,7 +42,7 @@
 	float:left;
 	padding:0px;
 	width:600px;
-	height:40px;
+	height:400px;
 	line-height:50px;
 	border-radius:5px;
     margin-top: 1px;
@@ -57,6 +57,7 @@ li:hover{
 	color: #282c3f;
 	list-style-type:none;
 	float:left;
+    
     font-weight: bolder;
     font: 17px "Open Sans",sans-serif ;
     margin-top: 25px;
@@ -75,6 +76,7 @@ li:hover{
     font-weight: bolder;
     font: 17px "Open Sans",sans-serif ;
     margin-top: 25px;
+    height: 40px;
 
 	padding-left:10px;
 	padding-right:10px;
@@ -183,7 +185,7 @@ li:hover{
 .main_list ul
 {
 	background-color:white;
-	height: 300px;
+	height: 450px;
 	position:absolute;
 	width:670px;
 	padding:0px;
@@ -198,6 +200,7 @@ li:hover{
 	/* position:absolute; */
 	width:180px;
 	padding:0px;
+    height: 450px;
 	/* float:; */
 	/* padding-bottom:px; */
     
