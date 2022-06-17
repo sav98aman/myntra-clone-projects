@@ -9,8 +9,8 @@ let div2 = document.getElementById("oo");
 div2.innerHTML = footer();
 
 import navbar from "../components/index1.js"
-let div2 = document.getElementById("navbar");
-div2.innerHTML = navbar();
+let div3 = document.getElementById("navbar");
+div3.innerHTML = navbar();
 
 fetch("./json/home.json")
     .then(response => response.json())
