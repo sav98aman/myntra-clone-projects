@@ -21,7 +21,7 @@ if(arr[0].email==obje.email && arr[0].pass==obje.pass)
     var array=[];
    array.push(obje)
     localStorage.setItem("signdata",JSON.stringify(array));
-    window.open("index1.html","_self")
+    window.open("index.html","_self")
 
 }
 else{
