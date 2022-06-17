@@ -24,31 +24,45 @@ function showmore() {
     "Price": "314",
     "Discripation": "Keep this hip this season with the HRX Men's Athleisure T-shirt. This versatile T-shirt can be styled any way you like for the ultimate gym-to-street look.",
     "rating": "4",
-    "category": "t-sirts"
+    "category": "t-sirts",
+    "discounts":"40",
   },];
  
-let Mainprice=Math.floor(Math.random()*(1000));
+let data1=JSON.parse(localStorage.getItem("cart"));
+
+let Mrp=0;
+let totalprice=0;
+
 
 
   
-data.forEach(function(ele){
+data.forEach(function(ele,index){
   var biggercartcard=document.createElement("div");
   biggercartcard.id="biggercartcard";
   var cartcard=document.createElement("div");
   cartcard.id="cartcard"
 
   var itemimg=document.createElement("img");
-  itemimg.setAttribute("src",ele.Image);
+  let image=ele.Image.split("~");
+  itemimg.setAttribute("src",image[index]);
   itemimg.id="append-image"
   
   var cartdetails=document.createElement("div");
   cartdetails.id="cartdetails";
  
-
+let namedata=ele.Name.split("~");
+let Brand=namedata[0];
+let description=namedata[1];
   
+
+  var brand=document.createElement("div");
+  brand.innerText=Brand;
+
   var name=document.createElement("div");
-  name.innerText=ele. Name;
+  name.innerText=description;
+
   name.id="name";
+
   var desc=document.createElement("div");
   desc.innerText=ele.category ;
   desc.id="category";
@@ -89,16 +103,19 @@ data.forEach(function(ele){
   prices.id="prices";
   var rate=document.createElement("p");
   rate.innerText="₹ "+ele.Price;
+  totalprice=totalprice+ele.Price;
   rate.id="rate";
-  
+
+   Mrp= Mrp+Math.floor(ele.Price*(100+ele.discounts)/100)
+
   var costprices=document.createElement("p");
-  costprices.innerText="₹ "+Mainprice;
+  costprices.innerText="₹ "+Mrp;
   costprices.id="costprices";
   var discounts=document.createElement("p");
 
   // ------- Taking discount Fix -----
 
-  discounts.innerText ="45%OFF";
+  discounts.innerText =ele.discounts+"% OFF";
   discounts.id="discounts";
   prices.append(rate,costprices,discounts);
 
@@ -119,5 +136,15 @@ data.forEach(function(ele){
 
 
 const totalmrp = document.querySelector('#totalmrp');
+totalmrp.innerText=Mrp;
 const discountMrp = document.querySelector('#discountmrp');
-totalmrp.innerText=Mainprice
+discountMrp.innerText="-"+(Mrp-totalprice);
+const totalamount = document.querySelector('#totalamount');
+totalamount.innerText=totalprice;
+
+// data.forEach((elem)=>{
+  
+//   Mrp= Mrp+Math.floor(elem.Price*(100+elem.discounts)/100);
+//   totalprice=totalprice+elem.Price
+  
+// })
