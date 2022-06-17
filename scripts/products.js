@@ -18,6 +18,7 @@ let display_products=(data)=>{
         // console.log(element.Image.trim(" ").split("~"))
 
         let img_array=element.Image.trim(" ").split("~")
+        // image
         let img_box=document.getElementById("image")
         for(let i=0;i<img_array.length;i++){
             let div=document.createElement("div")
@@ -49,6 +50,7 @@ let display_products=(data)=>{
         let div_price=document.createElement('div')
         let price=document.createElement('h3')
         let discounts=Math.floor(Math.random()* 40) + 10;
+        
         let price_max=Math.floor(element.Price*(100+discounts)/100)
         console.log(price_max)
         price.innerHTML=`<span>Rs.</span>${element.Price} <span id="max_price">Rs.${price_max}</span> <span id="discounts">(${discounts}%-Off)</span>`
@@ -85,6 +87,7 @@ let display_products=(data)=>{
     <div>
         <div id="delid"><span><h2>Best price: </h2></span><span><img id="img_id" src="../img/tag.png" alt=""></span></div>
         <div id="coupon-discounts">
+        <div><h3>Best Price: <span id="discounts">Rs. ${element.Price-50} </span></h3></div>
             <ul>
                 <li>Coupon Discount: Rs. 50 off (check cart for final savings)</li>
                 <li>Applicable on: Orders above Rs. 100 (only on first purchase)</li>
@@ -132,11 +135,11 @@ let display_products=(data)=>{
 
 // add to cart part
 document.getElementById("addtocart").addEventListener("click",function(){
-    addtocartfun(element)
+    addcarfun(element,discounts)
 })
 //wish-list
 document.getElementById("wishlist").addEventListener("click",function(){
-    wishlistfunc(element)
+    wishlistfunc(element,discounts)
 })
 document.getElementById('pincode-submit').addEventListener('click',function(){
     pincodecheck()
@@ -147,29 +150,45 @@ document.getElementById('pincode-submit').addEventListener('click',function(){
 display_products(data)
 
 //add to cart function 
-let cart =JSON.parse(localStorage.getItem('cart')) ||[]
-function addtocartfun(element){
-    let ID=element.id;
-    let count=0;
-    cart.forEach(function(ele){
-        if(ele.id==ID){
-            count++;
-        }
-    })
-    if(cart.length==count){
-        alert("iteam already present in cart")
-    }else{
-        cart.push(element)
+var cart=JSON.parse(localStorage.getItem("cart"))  || []
+function  addcarfun(ele,discounts){
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+    alreadyAdded = false;
+    cart.forEach(function (elem) {
+        if(elem.id==ele.id) alreadyAdded = true;
+        console.log("allready add")
+        alert("cart is allreday add")
+    });
+    if(!alreadyAdded) {
+    ele.discounts=discounts
+    cart.push(ele)
+    
+    // cart.push()
+    console.log(cart)
+    localStorage.setItem("cart",JSON.stringify(cart))
     }
 }
 
 
 //whishlist
 let wishlist=JSON.parse(localStorage.getItem('wishlist'))||[]
-function wishlistfunc(element){
-    wishlist.push(element);
+function wishlistfunc(ele,discounts){
 
-    localStorage.setItem('wishlist',JSON.stringify(wishlist))
+    wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    alreadyAdded = false;
+    wishlist.forEach(function (elem) {
+        if(elem.id==ele.id) alreadyAdded = true;
+        console.log("allready add")
+        alert("wishlist is allreday add")
+    });
+    if(!alreadyAdded) {
+    ele.discounts=discounts
+    wishlist.push(ele)
+    
+    // cart.push()
+    console.log(cart)
+    localStorage.setItem("wishlist",JSON.stringify(wishlist))
+    }
 }
 //pincode check
 function pincodecheck(){
