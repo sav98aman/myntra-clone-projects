@@ -1,0 +1,114 @@
+.oo{
+padding: 0px;
+margin: 0px;
+height: 100%;
+/* background-color: aquamarine; */
+
+width: 90%;
+/* background-color: #228B22; */
+}
+.container{
+height: 100%;
+width: 80%;
+/* background-color: aliceblue; */
+display: flex;
+gap: 30px;
+padding: 40px;
+justify-content: space-evenly;
+}
+#afterline {
+font-family: sans-serif;
+/* margin: 100px auto; */
+/* color: #228B22; */
+/* text-align: center; */
+/* font-size: 30px; */
+max-width: 600px;
+position: relative;
+}
+#afterline:after {
+content: "";
+display:block;
+width: 820px;
+height: 1px;
+background: #000000;
+position:absolute;
+left: 0;
+bottom: 65%;
+/* top: 70%; */
+
+margin-left:200px;
+/* margin-left: -50%;
+bottom: 50%; */
+}
+.HEADBOLD{
+margin-bottom: 20px;
+}
+.o{
+height: 100%;
+width: 80%;
+/* background-color: aquamarine; */
+margin-top: -50px;
+margin-left: 40px;
+padding-top: 10px;
+}
+.o>p{
+cursor : pointer;
+}
+#theend{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100px;
+/* width: 80%; */
+padding-left: 40px;
+/* margin-top: 100px; */
+}
+#contact:hover{
+text-decoration: underline;
+cursor: pointer;
+}
+.div{
+justify-content: center;
+padding-left: 70px; 
+}
+#usefullinks,p{
+margin: 2px;
+padding: -10px;
+}
+#apps{
+display: flex;
+}
+.playstore>img{
+height: 38px;
+width: 120px;
+}
+#keepintouch{
+display: flex;
+}
+.socialmedia>img{
+
+height: 15px;
+width: 15px;
+margin-right: 10px;
+}
+.org{
+display: flex;
+}
+.image>img{
+height: 70px;
+}
+.g{
+color: #80848e;
+}
+#supdivred{
+background-color: red;
+border-radius: 5px;
+font-size: 14px;
+padding: 2px;
+width: 30px;
+margin-left: 10px;
+color: #fafbfc;
+}
+.tex{
+margin-left: 5px;
+}
