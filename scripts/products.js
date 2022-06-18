@@ -1,15 +1,18 @@
+// navbar link
+import footer1 from "../components/footer1.js";
+let div1 = document.getElementById("div");
+div1.innerHTML = footer1();
+
+import footer from "../components/footer2.js"
+let div2 = document.getElementById("oo");
+div2.innerHTML = footer();
+
+import navbar from "../components/index1.js"
+let div3 = document.getElementById("navbar");
+div3.innerHTML = navbar();
 
 
-data=[ {
-    "id": "6",
-    "Image": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/8759f49a-ac2c-48ed-a15f-989d87a267bd1649918786474-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-5.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/bb7af3cf-403f-475d-967e-f1edb5719ead1649918786485-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-4.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/22f56f9e-72f0-408f-8de1-668923e4b8421649918786494-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-3.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/5e293ca3-1413-4fb4-a0fd-ffcab037a7511649918786503-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-2.jpg ~ https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17743840/2022/4/14/63c5d816-55b5-4397-b9ba-f64b3e569acf1649918786512-AS-M-NSW-TEE-DNA-FUTURA-FS-7021649918786000-1.jpg",
-    "Name": "Nike ~ Men Purple & Pink Brand Logo Printed ASM NSW Pure Cotton Sports T-shirt",
-    "Price": "951",
-    "Discripation": "Product design detail; Purple and pink Tshirt for men Brand logo printed Regular length Round neck Short, regular sleeves Knitted cotton fabric",
-    "rating": "4.5",
-    "category": "t-sirts"
-  },
-]
+//my productsdeatilspage
 let products_data=JSON.parse(localStorage.getItem('products_data'))
 
 let display_products=(data)=>{
