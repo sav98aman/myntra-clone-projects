@@ -4,6 +4,10 @@ import footer from "./components/footer2.js"
 document.querySelector("#footer1").innerHTML=footer1()
 document.querySelector("#footer2").innerHTML=footer()
 
+import navbar from "../components/index1.js"
+let div3 = document.getElementById("navbar");
+div3.innerHTML = navbar();
+
 // import swal from 'sweetalert';
 
 let login = true;
@@ -101,12 +105,12 @@ function wish_append() {
         let move = document.createElement("button")
         move.innerText = "MOVE TO BAG"
         move.setAttribute("id", "move")
-            let myarr=JSON.parse(localStorage.getItem("bag"))||[]
+            let myarr=JSON.parse(localStorage.getItem("cart"))||[]
         move.addEventListener("click",()=>{
 
             alert("Item succesfully added to Bag")
            myarr.push(ele)
-           localStorage.setItem("bag",JSON.stringify(myarr))
+           localStorage.setItem("cart",JSON.stringify(myarr))
         //    swal("Here's a message!", "It's pretty, isn't it?");
 
         })
