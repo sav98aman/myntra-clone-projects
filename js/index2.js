@@ -6,7 +6,7 @@ if(namedata[0].pass==signindata[0].pass)
     var muu = document.getElementById("men991");
     muu.style.marginLeft="-90px"
 
-    window.location.reload(index1.html)
+    window.location.reload(index.html)
 
     
 

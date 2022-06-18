@@ -8,6 +8,9 @@ import footer from "../components/footer2.js"
 let div2 = document.getElementById("oo");
 div2.innerHTML = footer();
 
+import navbar from "../components/index1.js"
+let div3 = document.getElementById("navbar")
+div3.innerHTML=navbar();
 
 fetch("./json/home.json")
     .then(response => response.json())
@@ -153,4 +156,18 @@ function shopbycategoryappend(data){
         card.append(img);
         shopbycategory.append(card); 
     });
+}
+
+var namedata=JSON.parse(localStorage.getItem("userdata"));
+var signindata=JSON.parse(localStorage.getItem("signdata"));
+if(namedata[0].pass==signindata[0].pass)
+{
+    document.querySelector(".bold1").innerText="My Account";
+    var muu = document.getElementById("men991");
+    muu.style.marginLeft="-90px"
+
+    window.location.reload(index.html)
+
+    
+
 }
