@@ -6,6 +6,10 @@ import footer from "../components/footer2.js"
 let div2 = document.getElementById("oo");
 div2.innerHTML = footer();
 
+import navbar from "../components/index1.js"
+let div3 = document.getElementById("navbar");
+div3.innerHTML= navbar();
+
 
 fetch("./json/men.json")
     .then(response => response.json())
