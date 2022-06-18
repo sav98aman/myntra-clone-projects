@@ -158,7 +158,6 @@ function shopbycategoryappend(data){
     });
 }
 
-
 /*  singup part  */
 
 
