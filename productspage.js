@@ -15,6 +15,9 @@ function appendData(data){
     data.forEach(ele => {
         let card = document.createElement("div")
         card.setAttribute("class","card")
+        card.addEventListener("click",()=>{
+            savedata(ele)
+        })
 
         let img = document.createElement("img")
         img.setAttribute("class", "pro-img")
@@ -48,6 +51,13 @@ function appendData(data){
         product.append(card)
 
     });
+}
+
+function savedata(ele){
+    let arr = []
+    arr.push(ele)
+    localStorage.setItem("products_data",JSON.stringify(arr))
+    window.location.href="./scr/products.html"
 }
 
 
